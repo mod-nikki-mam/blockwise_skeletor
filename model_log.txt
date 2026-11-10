@@ -1,0 +1,73 @@
+
+==========
+RUN SUMMARY  2026-11-05 14:41:12
+==========
+  max length         : 256 bytes
+  embed dim          : 32
+  hidden size        : 128
+  linear layers      : 6
+  haar coarse        : 2
+  epochs per stage   : 2
+  batch size         : 128
+  learning rate      : 0.001
+  parameters         : 111780
+  model file (kb)    : 441.7
+
+  model layers:
+    Classifier(
+      (embed): Embedding(257, 32, padding_idx=256)
+      (blocks): ModuleList(
+        (0): TernaryLinear(in_features=288, out_features=128, bias=True)
+        (1-4): 4 x TernaryLinear(in_features=128, out_features=128, bias=True)
+      )
+      (head): TernaryLinear(in_features=128, out_features=4, bias=True)
+    )
+
+  full model accuracy: 66.0%
+  test samples       : 7600
+  test loss          : 0.8873
+  test accuracy      : 4887 / 7600  (64.3%)
+  test time          : 0.17s
+
+  accuracy per class:
+    World    :  70.0%  (1900 samples)
+    Sports   :  78.2%  (1900 samples)
+    Business :  46.8%  (1900 samples)
+    Sci/Tech :  62.3%  (1900 samples)
+
+  confusion matrix (row = true class, column = predicted class):
+    World      1330    267    106    197
+    Sports      192   1485     65    158
+    Business    280    282    889    449
+    Sci/Tech    222    283    212   1183
+
+  distillation history (hybrid = ternary up to this stage, full precision after):
+    block 1 : distill_loss=0.00076  hybrid_acc=58.7%  time=8.7s
+    block 2 : distill_loss=0.00037  hybrid_acc=64.0%  time=17.1s
+    block 3 : distill_loss=0.00094  hybrid_acc=64.2%  time=15.6s
+    block 4 : distill_loss=0.00272  hybrid_acc=64.2%  time=19.5s
+    block 5 : distill_loss=0.00955  hybrid_acc=64.5%  time=12.1s
+    head    : distill_loss=0.12472  hybrid_acc=64.3%  time=6.2s
+
+  sample predictions vs targets:
+  [0] text:      Fears for T N pension after talks Unions representing workers at Turne
+      prediction: Business
+      target:     Business
+
+  [1] text:      The Race is On: Second Private Team Sets Launch Date for Human Spacefl
+      prediction: Sci/Tech
+      target:     Sci/Tech
+
+  [2] text:      Ky. Company Wins Grant to Study Peptides (AP) AP - A company founded b
+      prediction: World
+      target:     Sci/Tech
+
+  [3] text:      Prediction Unit Helps Forecast Wildfires (AP) AP - It's barely dawn wh
+      prediction: Sci/Tech
+      target:     Sci/Tech
+
+  [4] text:      Calif. Aims to Limit Farm-Related Smog (AP) AP - Southern California's
+      prediction: Sports
+      target:     Sci/Tech
+
+====================

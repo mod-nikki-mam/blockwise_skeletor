@@ -1,0 +1,206 @@
+
+==========
+FULL MODEL RUN SUMMARY  2026-11-05 14:31:12
+==========
+  max length     : 256 bytes
+  embed dim      : 32
+  hidden size    : 128
+  linear layers  : 6
+  haar coarse    : 2
+  epochs         : 2
+  batch size     : 128
+  learning rate  : 0.001
+  parameters     : 111780
+  model file(kb) : 441.5
+
+  model layers:
+    Classifier(
+      (embed): Embedding(257, 32, padding_idx=256)
+      (blocks): ModuleList(
+        (0): Linear(in_features=288, out_features=128, bias=True)
+        (1-4): 4 x Linear(in_features=128, out_features=128, bias=True)
+      )
+      (head): Linear(in_features=128, out_features=4, bias=True)
+    )
+
+  test samples   : 7600
+  test loss      : 0.9527
+  test accuracy  : 4610 / 7600  (60.7%)
+  test time      : 0.44s
+
+  accuracy per class:
+    World    :  56.6%  (1900 samples)
+    Sports   :  78.2%  (1900 samples)
+    Business :  41.3%  (1900 samples)
+    Sci/Tech :  66.6%  (1900 samples)
+
+  confusion matrix (row = true class, column = predicted class):
+    World      1075    333    155    337
+    Sports      110   1485     88    217
+    Business    145    352    784    619
+    Sci/Tech    144    324    166   1266
+
+  training history:
+    epoch 1: train_loss=1.1614  test_acc=54.9%  time=19.3s
+    epoch 2: train_loss=0.9801  test_acc=60.7%  time=15.5s
+
+  sample predictions vs targets:
+  [0] text:      Fears for T N pension after talks Unions representing workers at Turne
+      prediction: Sports
+      target:     Business
+
+  [1] text:      The Race is On: Second Private Team Sets Launch Date for Human Spacefl
+      prediction: Sci/Tech
+      target:     Sci/Tech
+
+  [2] text:      Ky. Company Wins Grant to Study Peptides (AP) AP - A company founded b
+      prediction: World
+      target:     Sci/Tech
+
+  [3] text:      Prediction Unit Helps Forecast Wildfires (AP) AP - It's barely dawn wh
+      prediction: Sports
+      target:     Sci/Tech
+
+  [4] text:      Calif. Aims to Limit Farm-Related Smog (AP) AP - Southern California's
+      prediction: Sci/Tech
+      target:     Sci/Tech
+
+====================
+
+==========
+FULL MODEL RUN SUMMARY  2026-11-05 14:32:41
+==========
+  max length     : 256 bytes
+  embed dim      : 32
+  hidden size    : 128
+  linear layers  : 6
+  haar coarse    : 2
+  epochs         : 2
+  batch size     : 128
+  learning rate  : 0.001
+  parameters     : 111780
+  model file(kb) : 441.5
+
+  model layers:
+    Classifier(
+      (embed): Embedding(257, 32, padding_idx=256)
+      (blocks): ModuleList(
+        (0): Linear(in_features=288, out_features=128, bias=True)
+        (1-4): 4 x Linear(in_features=128, out_features=128, bias=True)
+      )
+      (head): Linear(in_features=128, out_features=4, bias=True)
+    )
+
+  test samples   : 7600
+  test loss      : 0.9461
+  test accuracy  : 4622 / 7600  (60.8%)
+  test time      : 0.52s
+
+  accuracy per class:
+    World    :  57.0%  (1900 samples)
+    Sports   :  79.5%  (1900 samples)
+    Business :  53.6%  (1900 samples)
+    Sci/Tech :  53.1%  (1900 samples)
+
+  confusion matrix (row = true class, column = predicted class):
+    World      1083    395    225    197
+    Sports      132   1511    151    106
+    Business    172    345   1019    364
+    Sci/Tech    131    364    396   1009
+
+  training history:
+    epoch 1: train_loss=1.1487  test_acc=51.6%  time=23.6s
+    epoch 2: train_loss=0.9910  test_acc=60.8%  time=25.1s
+
+  sample predictions vs targets:
+  [0] text:      Fears for T N pension after talks Unions representing workers at Turne
+      prediction: Sports
+      target:     Business
+
+  [1] text:      The Race is On: Second Private Team Sets Launch Date for Human Spacefl
+      prediction: Sci/Tech
+      target:     Sci/Tech
+
+  [2] text:      Ky. Company Wins Grant to Study Peptides (AP) AP - A company founded b
+      prediction: World
+      target:     Sci/Tech
+
+  [3] text:      Prediction Unit Helps Forecast Wildfires (AP) AP - It's barely dawn wh
+      prediction: Business
+      target:     Sci/Tech
+
+  [4] text:      Calif. Aims to Limit Farm-Related Smog (AP) AP - Southern California's
+      prediction: Sports
+      target:     Sci/Tech
+
+====================
+
+==========
+FULL MODEL RUN SUMMARY  2026-11-05 14:37:03
+==========
+  max length     : 256 bytes
+  embed dim      : 32
+  hidden size    : 128
+  linear layers  : 6
+  haar coarse    : 2
+  epochs         : 4
+  batch size     : 128
+  learning rate  : 0.001
+  parameters     : 111780
+  model file(kb) : 441.5
+
+  model layers:
+    Classifier(
+      (embed): Embedding(257, 32, padding_idx=256)
+      (blocks): ModuleList(
+        (0): Linear(in_features=288, out_features=128, bias=True)
+        (1-4): 4 x Linear(in_features=128, out_features=128, bias=True)
+      )
+      (head): Linear(in_features=128, out_features=4, bias=True)
+    )
+
+  test samples   : 7600
+  test loss      : 0.8352
+  test accuracy  : 5016 / 7600  (66.0%)
+  test time      : 0.61s
+
+  accuracy per class:
+    World    :  72.2%  (1900 samples)
+    Sports   :  77.7%  (1900 samples)
+    Business :  48.3%  (1900 samples)
+    Sci/Tech :  65.8%  (1900 samples)
+
+  confusion matrix (row = true class, column = predicted class):
+    World      1371    220    103    206
+    Sports      191   1476     71    162
+    Business    257    263    918    462
+    Sci/Tech    228    230    191   1251
+
+  training history:
+    epoch 1: train_loss=0.9199  test_acc=62.6%  time=19.6s
+    epoch 2: train_loss=0.8853  test_acc=64.5%  time=19.0s
+    epoch 3: train_loss=0.8616  test_acc=64.5%  time=18.3s
+    epoch 4: train_loss=0.8380  test_acc=66.0%  time=21.6s
+
+  sample predictions vs targets:
+  [0] text:      Fears for T N pension after talks Unions representing workers at Turne
+      prediction: World
+      target:     Business
+
+  [1] text:      The Race is On: Second Private Team Sets Launch Date for Human Spacefl
+      prediction: Sci/Tech
+      target:     Sci/Tech
+
+  [2] text:      Ky. Company Wins Grant to Study Peptides (AP) AP - A company founded b
+      prediction: World
+      target:     Sci/Tech
+
+  [3] text:      Prediction Unit Helps Forecast Wildfires (AP) AP - It's barely dawn wh
+      prediction: Sci/Tech
+      target:     Sci/Tech
+
+  [4] text:      Calif. Aims to Limit Farm-Related Smog (AP) AP - Southern California's
+      prediction: Sports
+      target:     Sci/Tech
+
+====================
